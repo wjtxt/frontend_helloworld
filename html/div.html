@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>div test</title>
+    <link href="../css/div.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../libs/ztree/css/ztreeStyle/zTreeStyle.css">
+    <!--<script src="../libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/div.js"></script> -->
+    <script type="text/javascript" src="../libs/require.js" data-main="../js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="bar" id="header">
+        <span style="height:100%">这是标题党</span>
+    </div>
+
+    <div class="container clearfix">
+
+        <div class="col col-300" id="left">
+            <ul>
+                <li><a href="#">第1章</a></li>
+                <li><a href="#">第2章</a></li>
+                <li><a href="#">第3章</a></li>
+                <li><a href="#">第4章</a></li>
+                <li><a href="#">第5章</a></li>
+                <li><a href="#">第6章</a></li>
+            </ul>
+
+            <!--输入域-->
+            <div class="div_table" style="border-collapse:separate;border-spacing:5px; ">
+                <!--用户名行-->
+                <div class="div_table_row">
+                    <div class="div_table_cell" style="width:40%;text-align: right">用户名：</div>
+                    <div class="div_table_cell"><input style='width: 90%;' type="text" id='tb_username' name="username"></div>
+                </div>
+
+                <!--密码行-->
+                <div class="div_table_row">
+                    <div class="div_table_cell" style="width:40%;text-align: right">密 &nbsp 码：</div>
+                    <div class="div_table_cell"><input style='width: 90%;' type="password" id='tb_password' name="password"></div>
+                </div>
+            </div>
+
+            <!--按钮行-->
+            <div class="div_table" style="margin-top: 10px;width: 100%">
+                <div class="div_table_row">
+                    <div class="div_table_cell"><input style='width: 60%;' type="button" id="btn_clickme" name="clickme" value="点我" /></div>
+                    <div class="div_table_cell"><input style='width: 60%;' type="button" id="btn_test" name="test" value="测试" /></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col pane_400_300" id="right">
+            <div class="no-border"><img style="width:100%;height:100%" src="../img/1.jpg" alt="图片"></div>
+            <div class="no-border">2222</div>
+        </div>
+        <!--<div class="col" >
+            <img style='width: 400px;height: 290px;' src="../img/1.jpg"  />
+            <div class="no-border">2222</div>
+        </div>-->
+
+        <div class="col pane_400_300" id='ztree_pane'>
+            <ul id='tree' class="ztree"></ul>
+        </div>
+
+        <div class="col pane_400_300" id='table_pane'>
+        </div>
+
+        <!-- <div style="clear:both;border:none"></div> -->
+    </div>
+
+    <div class="bar" id="footer">
+        <span>这是标题党</span>
+    </div>
+
+    <!--放在body标签结束前，保证脚本执行前，-->
+    <!--<script type="text/javascript" src="../js/div.js"></script> -->
+</body>
+
+</html>

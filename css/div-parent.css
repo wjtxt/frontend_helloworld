@@ -1,0 +1,35 @@
+div{
+    border: 1px solid red;
+}
+
+.cell {
+    float:left;
+    width:80px;
+    height:80px;
+    border:1px solid blue;
+    margin: 5px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*.container {
+    width:auto;
+    border:1px solid red;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}*/
