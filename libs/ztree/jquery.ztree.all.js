@@ -11,6 +11,10 @@
  * email: hunter.z@263.net
  * Date: 2017-01-20
  */
+
+// debug info [garin,170825]
+console.debug('begin to load ztree code!');
+
 (function ($) {
     var settings = {}, roots = {}, caches = {},
         //default consts of core
@@ -1640,7 +1644,13 @@
                 }
             }
         };
+    
+    
     // zTree defind
+    
+    // debug info [garin,170825]
+    console.debug('begin to define zTree object.');
+
     $.fn.zTree = {
         consts: _consts,
         _z: {

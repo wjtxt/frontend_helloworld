@@ -5,21 +5,42 @@
     <meta charset="UTF-8">
     <title>div test</title>
     <link href="../css/div.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery-3 -->
+    <script type="text/javascript" src="../libs/jquery-3.2.1.js"></script>
+
+    <!--ztree-->
     <link rel="stylesheet" href="../libs/ztree/css/ztreeStyle/zTreeStyle.css">
-    <!--<script src="../libs/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="../js/div.js"></script> -->
-    <script type="text/javascript" src="../libs/require.js" data-main="../js/main.js"></script>
+    <script type="text/javascript" src="../libs/ztree/jquery.ztree.all.js"></script>
+
+    <!-- tether -->
+    <link rel="stylesheet" href="../libs/tether-1.3.3/css/tether.css">
+    <link rel="stylesheet" href="../libs/tether-1.3.3/css/tether-theme-basic.css">
+    <link rel="stylesheet" href="../libs/tether-1.3.3/css/tether-theme-arrows.css">
+    <link rel="stylesheet" href="../libs/tether-1.3.3/css/tether-theme-arrows-dark.css">
+    <script type="text/javascript" src="../libs/tether-1.3.3/js/tether.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../libs/bootstrap/4.0.0-alpha.6/css/bootstrap.css">
+
+    <!-- bootstrap table -->
+    <link rel="stylesheet" href="../libs/bootstrap-table/1.11.0/css/bootstrap-table.css">
+
+    <!-- requirejs -->
+    <script type="text/javascript" src="../libs/require.js" data-main="../js/main"></script>
 </head>
 
 <body>
 
-    <div class="bar" id="header">
-        <span style="height:100%">这是标题党</span>
+    <!--页头-->
+    <div class="div2 bar" id="header">
+        <span style="height:100%">这是页头</span>
     </div>
 
-    <div class="container clearfix">
+    <!--第一行-->
+    <div class="div2 container2 clearfix">
 
-        <div class="col col-300" id="left">
+        <div class="div2 cell" id="mix_pane">
             <ul>
                 <li><a href="#">第1章</a></li>
                 <li><a href="#">第2章</a></li>
@@ -46,6 +67,16 @@
 
             <!--按钮行-->
             <div class="div_table" style="margin-top: 10px;width: 100%">
+                <!-- 悬浮框例子 -->
+                <div class="div_table_row">
+                    <div class="div_table_cell" style="width: 50%">
+                        <div data-placement="left" data-title="记住我?" class="checkbox switch switch-small make-switch tooltip-check" data-delay="300"
+                            data-animated="false" style="background: green;text-align: left">
+                            <input type="checkbox" checked data-toggle="tooltip" />
+                        </div>
+                    </div>
+                </div>
+
                 <div class="div_table_row">
                     <div class="div_table_cell"><input style='width: 60%;' type="button" id="btn_clickme" name="clickme" value="点我" /></div>
                     <div class="div_table_cell"><input style='width: 60%;' type="button" id="btn_test" name="test" value="测试" /></div>
@@ -53,27 +84,49 @@
             </div>
         </div>
 
-        <div class="col pane_400_300" id="right">
+        <div class="div2 cell" id="pic_pane">
             <div class="no-border"><img style="width:100%;height:100%" src="../img/1.jpg" alt="图片"></div>
-            <div class="no-border">2222</div>
+            <div class="no-border"><a href="https://www.baidu.com" target="_blank">history.jpg</a></div>
         </div>
-        <!--<div class="col" >
-            <img style='width: 400px;height: 290px;' src="../img/1.jpg"  />
-            <div class="no-border">2222</div>
-        </div>-->
 
-        <div class="col pane_400_300" id='ztree_pane'>
+        <div class="div2 cell" id='ztree_pane'>
+            <!-- 通过class属性，使用ztree控件 -->
             <ul id='tree' class="ztree"></ul>
         </div>
 
-        <div class="col pane_400_300" id='table_pane'>
-        </div>
-
-        <!-- <div style="clear:both;border:none"></div> -->
     </div>
 
-    <div class="bar" id="footer">
-        <span>这是标题党</span>
+    <!--第二行-->
+    <div class="div2 container clearfix" id="table_container">
+        <table id="receiveLogs-table" class="table table-hover" data-pagination="true" data-show-refresh="false" data-show-toggle="false"
+            data-showColumns="false" data-toggle="table" data-row-style="rowStyle">
+            <thead>
+                <tr>
+                    <th colspan="5" data-valign="middle" data-halign="center">用户基本信息</th>
+                    <th colspan="6" data-valign="middle" data-halign="center">用户购买信息</th>
+                    <th rowspan="2" data-field="operate" data-valign="middle" data-halign="center" data-formatter="operateFormatter">操作</th>
+                </tr>
+                <tr>
+                    <th data-field="uid" data-align="center" data-formatter="setCode">用户编号</th>
+                    <th data-field="name" data-align="center">姓名</th>
+                    <th data-field="sex" data-align="center">性别</th>
+                    <th data-field="age" data-align="center" data-sortable="true">年龄</th>
+                    <th data-field="area" data-align="center">户籍所在地</th>
+
+                    <th data-field="loginWay" data-align="center">登录方式</th>
+                    <th data-field="status" data-align="center">状态</th>
+                    <th data-field="createTime" data-align="center">登录时间</th>
+                    <th data-field="orderService" data-align="center">购买服务</th>
+                    <th data-field="connectorIP" data-align="center">连接器IP</th>
+                    <th data-field="connectorPort" data-align="center">连接器端口</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!--页脚-->
+    <div class="div2 bar" id="footer">
+        <span>这是页脚</span>
     </div>
 
     <!--放在body标签结束前，保证脚本执行前，-->
